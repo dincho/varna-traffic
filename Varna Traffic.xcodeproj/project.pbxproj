@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BB77E0A184A796300BAA5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E09184A796300BAA5AB /* Foundation.framework */; };
+		5BB77E0C184A796300BAA5AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */; };
+		5BB77E0E184A796300BAA5AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0D184A796300BAA5AB /* UIKit.framework */; };
+		5BB77E14184A796300BAA5AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E12184A796300BAA5AB /* InfoPlist.strings */; };
+		5BB77E16184A796300BAA5AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E15184A796300BAA5AB /* main.m */; };
+		5BB77E1A184A796300BAA5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E19184A796300BAA5AB /* AppDelegate.m */; };
+		5BB77E1D184A796300BAA5AB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E1B184A796300BAA5AB /* Main_iPhone.storyboard */; };
+		5BB77E20184A796300BAA5AB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E1E184A796300BAA5AB /* Main_iPad.storyboard */; };
+		5BB77E23184A796300BAA5AB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E22184A796300BAA5AB /* FirstViewController.m */; };
+		5BB77E26184A796300BAA5AB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E25184A796300BAA5AB /* SecondViewController.m */; };
+		5BB77E28184A796300BAA5AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E27184A796300BAA5AB /* Images.xcassets */; };
+		5BB77E2F184A796300BAA5AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E2E184A796300BAA5AB /* XCTest.framework */; };
+		5BB77E30184A796300BAA5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E09184A796300BAA5AB /* Foundation.framework */; };
+		5BB77E31184A796300BAA5AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0D184A796300BAA5AB /* UIKit.framework */; };
+		5BB77E39184A796300BAA5AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E37184A796300BAA5AB /* InfoPlist.strings */; };
+		5BB77E3B184A796300BAA5AB /* Varna_TrafficTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E3A184A796300BAA5AB /* Varna_TrafficTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5BB77E32184A796300BAA5AB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BB77DFE184A796300BAA5AB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5BB77E05184A796300BAA5AB;
+			remoteInfo = "Varna Traffic";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5BB77E06184A796300BAA5AB /* Varna Traffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Varna Traffic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB77E09184A796300BAA5AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5BB77E0D184A796300BAA5AB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		5BB77E11184A796300BAA5AB /* Varna Traffic-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Varna Traffic-Info.plist"; sourceTree = "<group>"; };
+		5BB77E13184A796300BAA5AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BB77E15184A796300BAA5AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5BB77E17184A796300BAA5AB /* Varna Traffic-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Varna Traffic-Prefix.pch"; sourceTree = "<group>"; };
+		5BB77E18184A796300BAA5AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5BB77E19184A796300BAA5AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5BB77E1C184A796300BAA5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		5BB77E1F184A796300BAA5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		5BB77E21184A796300BAA5AB /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		5BB77E22184A796300BAA5AB /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		5BB77E24184A796300BAA5AB /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		5BB77E25184A796300BAA5AB /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		5BB77E27184A796300BAA5AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		5BB77E2D184A796300BAA5AB /* Varna TrafficTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Varna TrafficTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BB77E2E184A796300BAA5AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		5BB77E36184A796300BAA5AB /* Varna TrafficTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Varna TrafficTests-Info.plist"; sourceTree = "<group>"; };
+		5BB77E38184A796300BAA5AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		5BB77E3A184A796300BAA5AB /* Varna_TrafficTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Varna_TrafficTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5BB77E03184A796300BAA5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB77E0C184A796300BAA5AB /* CoreGraphics.framework in Frameworks */,
+				5BB77E0E184A796300BAA5AB /* UIKit.framework in Frameworks */,
+				5BB77E0A184A796300BAA5AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB77E2A184A796300BAA5AB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB77E2F184A796300BAA5AB /* XCTest.framework in Frameworks */,
+				5BB77E31184A796300BAA5AB /* UIKit.framework in Frameworks */,
+				5BB77E30184A796300BAA5AB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5BB77DFD184A796300BAA5AB = {
+			isa = PBXGroup;
+			children = (
+				5BB77E0F184A796300BAA5AB /* Varna Traffic */,
+				5BB77E34184A796300BAA5AB /* Varna TrafficTests */,
+				5BB77E08184A796300BAA5AB /* Frameworks */,
+				5BB77E07184A796300BAA5AB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BB77E07184A796300BAA5AB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BB77E06184A796300BAA5AB /* Varna Traffic.app */,
+				5BB77E2D184A796300BAA5AB /* Varna TrafficTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5BB77E08184A796300BAA5AB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5BB77E09184A796300BAA5AB /* Foundation.framework */,
+				5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */,
+				5BB77E0D184A796300BAA5AB /* UIKit.framework */,
+				5BB77E2E184A796300BAA5AB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5BB77E0F184A796300BAA5AB /* Varna Traffic */ = {
+			isa = PBXGroup;
+			children = (
+				5BB77E18184A796300BAA5AB /* AppDelegate.h */,
+				5BB77E19184A796300BAA5AB /* AppDelegate.m */,
+				5BB77E1B184A796300BAA5AB /* Main_iPhone.storyboard */,
+				5BB77E1E184A796300BAA5AB /* Main_iPad.storyboard */,
+				5BB77E21184A796300BAA5AB /* FirstViewController.h */,
+				5BB77E22184A796300BAA5AB /* FirstViewController.m */,
+				5BB77E24184A796300BAA5AB /* SecondViewController.h */,
+				5BB77E25184A796300BAA5AB /* SecondViewController.m */,
+				5BB77E27184A796300BAA5AB /* Images.xcassets */,
+				5BB77E10184A796300BAA5AB /* Supporting Files */,
+			);
+			path = "Varna Traffic";
+			sourceTree = "<group>";
+		};
+		5BB77E10184A796300BAA5AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BB77E11184A796300BAA5AB /* Varna Traffic-Info.plist */,
+				5BB77E12184A796300BAA5AB /* InfoPlist.strings */,
+				5BB77E15184A796300BAA5AB /* main.m */,
+				5BB77E17184A796300BAA5AB /* Varna Traffic-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BB77E34184A796300BAA5AB /* Varna TrafficTests */ = {
+			isa = PBXGroup;
+			children = (
+				5BB77E3A184A796300BAA5AB /* Varna_TrafficTests.m */,
+				5BB77E35184A796300BAA5AB /* Supporting Files */,
+			);
+			path = "Varna TrafficTests";
+			sourceTree = "<group>";
+		};
+		5BB77E35184A796300BAA5AB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5BB77E36184A796300BAA5AB /* Varna TrafficTests-Info.plist */,
+				5BB77E37184A796300BAA5AB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5BB77E05184A796300BAA5AB /* Varna Traffic */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BB77E3E184A796300BAA5AB /* Build configuration list for PBXNativeTarget "Varna Traffic" */;
+			buildPhases = (
+				5BB77E02184A796300BAA5AB /* Sources */,
+				5BB77E03184A796300BAA5AB /* Frameworks */,
+				5BB77E04184A796300BAA5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Varna Traffic";
+			productName = "Varna Traffic";
+			productReference = 5BB77E06184A796300BAA5AB /* Varna Traffic.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5BB77E2C184A796300BAA5AB /* Varna TrafficTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BB77E41184A796300BAA5AB /* Build configuration list for PBXNativeTarget "Varna TrafficTests" */;
+			buildPhases = (
+				5BB77E29184A796300BAA5AB /* Sources */,
+				5BB77E2A184A796300BAA5AB /* Frameworks */,
+				5BB77E2B184A796300BAA5AB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5BB77E33184A796300BAA5AB /* PBXTargetDependency */,
+			);
+			name = "Varna TrafficTests";
+			productName = "Varna TrafficTests";
+			productReference = 5BB77E2D184A796300BAA5AB /* Varna TrafficTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5BB77DFE184A796300BAA5AB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "Dincho Todorov";
+				TargetAttributes = {
+					5BB77E2C184A796300BAA5AB = {
+						TestTargetID = 5BB77E05184A796300BAA5AB;
+					};
+				};
+			};
+			buildConfigurationList = 5BB77E01184A796300BAA5AB /* Build configuration list for PBXProject "Varna Traffic" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5BB77DFD184A796300BAA5AB;
+			productRefGroup = 5BB77E07184A796300BAA5AB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5BB77E05184A796300BAA5AB /* Varna Traffic */,
+				5BB77E2C184A796300BAA5AB /* Varna TrafficTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5BB77E04184A796300BAA5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB77E20184A796300BAA5AB /* Main_iPad.storyboard in Resources */,
+				5BB77E28184A796300BAA5AB /* Images.xcassets in Resources */,
+				5BB77E1D184A796300BAA5AB /* Main_iPhone.storyboard in Resources */,
+				5BB77E14184A796300BAA5AB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB77E2B184A796300BAA5AB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB77E39184A796300BAA5AB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5BB77E02184A796300BAA5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB77E26184A796300BAA5AB /* SecondViewController.m in Sources */,
+				5BB77E1A184A796300BAA5AB /* AppDelegate.m in Sources */,
+				5BB77E23184A796300BAA5AB /* FirstViewController.m in Sources */,
+				5BB77E16184A796300BAA5AB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5BB77E29184A796300BAA5AB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BB77E3B184A796300BAA5AB /* Varna_TrafficTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5BB77E33184A796300BAA5AB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5BB77E05184A796300BAA5AB /* Varna Traffic */;
+			targetProxy = 5BB77E32184A796300BAA5AB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5BB77E12184A796300BAA5AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB77E13184A796300BAA5AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		5BB77E1B184A796300BAA5AB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB77E1C184A796300BAA5AB /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		5BB77E1E184A796300BAA5AB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB77E1F184A796300BAA5AB /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		5BB77E37184A796300BAA5AB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5BB77E38184A796300BAA5AB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5BB77E3C184A796300BAA5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5BB77E3D184A796300BAA5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5BB77E3F184A796300BAA5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Varna Traffic/Varna Traffic-Prefix.pch";
+				INFOPLIST_FILE = "Varna Traffic/Varna Traffic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		5BB77E40184A796300BAA5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Varna Traffic/Varna Traffic-Prefix.pch";
+				INFOPLIST_FILE = "Varna Traffic/Varna Traffic-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		5BB77E42184A796300BAA5AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Varna Traffic.app/Varna Traffic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Varna Traffic/Varna Traffic-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Varna TrafficTests/Varna TrafficTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		5BB77E43184A796300BAA5AB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Varna Traffic.app/Varna Traffic";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Varna Traffic/Varna Traffic-Prefix.pch";
+				INFOPLIST_FILE = "Varna TrafficTests/Varna TrafficTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5BB77E01184A796300BAA5AB /* Build configuration list for PBXProject "Varna Traffic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB77E3C184A796300BAA5AB /* Debug */,
+				5BB77E3D184A796300BAA5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BB77E3E184A796300BAA5AB /* Build configuration list for PBXNativeTarget "Varna Traffic" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB77E3F184A796300BAA5AB /* Debug */,
+				5BB77E40184A796300BAA5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		5BB77E41184A796300BAA5AB /* Build configuration list for PBXNativeTarget "Varna TrafficTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5BB77E42184A796300BAA5AB /* Debug */,
+				5BB77E43184A796300BAA5AB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5BB77DFE184A796300BAA5AB /* Project object */;
+}
