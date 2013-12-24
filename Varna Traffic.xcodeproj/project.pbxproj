@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B64892B18674C2900B553D1 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B64892A18674C2900B553D1 /* Station.m */; };
+		5B985F94184B585A007699BE /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F93184B585A007699BE /* StationsViewController.m */; };
+		5B985F97184B7F44007699BE /* StationsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F96184B7F44007699BE /* StationsMapViewController.m */; };
+		5B985F9A184B7F6D007699BE /* StationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F99184B7F6D007699BE /* StationsListViewController.m */; };
+		5B985F9D184B8246007699BE /* ContainerControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F9C184B8246007699BE /* ContainerControllerSegue.m */; };
 		5BB77E0A184A796300BAA5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E09184A796300BAA5AB /* Foundation.framework */; };
 		5BB77E0C184A796300BAA5AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */; };
 		5BB77E0E184A796300BAA5AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0D184A796300BAA5AB /* UIKit.framework */; };
@@ -15,14 +20,17 @@
 		5BB77E1A184A796300BAA5AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E19184A796300BAA5AB /* AppDelegate.m */; };
 		5BB77E1D184A796300BAA5AB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E1B184A796300BAA5AB /* Main_iPhone.storyboard */; };
 		5BB77E20184A796300BAA5AB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E1E184A796300BAA5AB /* Main_iPad.storyboard */; };
-		5BB77E23184A796300BAA5AB /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E22184A796300BAA5AB /* FirstViewController.m */; };
-		5BB77E26184A796300BAA5AB /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E25184A796300BAA5AB /* SecondViewController.m */; };
 		5BB77E28184A796300BAA5AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E27184A796300BAA5AB /* Images.xcassets */; };
 		5BB77E2F184A796300BAA5AB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E2E184A796300BAA5AB /* XCTest.framework */; };
 		5BB77E30184A796300BAA5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E09184A796300BAA5AB /* Foundation.framework */; };
 		5BB77E31184A796300BAA5AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0D184A796300BAA5AB /* UIKit.framework */; };
 		5BB77E39184A796300BAA5AB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5BB77E37184A796300BAA5AB /* InfoPlist.strings */; };
 		5BB77E3B184A796300BAA5AB /* Varna_TrafficTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BB77E3A184A796300BAA5AB /* Varna_TrafficTests.m */; };
+		5BB77E45184A7DEF00BAA5AB /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E44184A7DEF00BAA5AB /* MapKit.framework */; };
+		5BCF245818689BFC00E7CD6D /* OCAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF245018689BFC00E7CD6D /* OCAlgorithms.m */; };
+		5BCF245918689BFC00E7CD6D /* OCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF245218689BFC00E7CD6D /* OCAnnotation.m */; };
+		5BCF245A18689BFC00E7CD6D /* OCDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF245418689BFC00E7CD6D /* OCDistance.m */; };
+		5BCF245B18689BFC00E7CD6D /* OCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5BCF245718689BFC00E7CD6D /* OCMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B64892918674C2900B553D1 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
+		5B64892A18674C2900B553D1 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
+		5B985F92184B585A007699BE /* StationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsViewController.h; sourceTree = "<group>"; };
+		5B985F93184B585A007699BE /* StationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewController.m; sourceTree = "<group>"; };
+		5B985F95184B7F44007699BE /* StationsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsMapViewController.h; sourceTree = "<group>"; };
+		5B985F96184B7F44007699BE /* StationsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsMapViewController.m; sourceTree = "<group>"; };
+		5B985F98184B7F6D007699BE /* StationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsListViewController.h; sourceTree = "<group>"; };
+		5B985F99184B7F6D007699BE /* StationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsListViewController.m; sourceTree = "<group>"; };
+		5B985F9B184B8246007699BE /* ContainerControllerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerControllerSegue.h; sourceTree = "<group>"; };
+		5B985F9C184B8246007699BE /* ContainerControllerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerControllerSegue.m; sourceTree = "<group>"; };
 		5BB77E06184A796300BAA5AB /* Varna Traffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Varna Traffic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB77E09184A796300BAA5AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -48,16 +66,23 @@
 		5BB77E19184A796300BAA5AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5BB77E1C184A796300BAA5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		5BB77E1F184A796300BAA5AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		5BB77E21184A796300BAA5AB /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		5BB77E22184A796300BAA5AB /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		5BB77E24184A796300BAA5AB /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		5BB77E25184A796300BAA5AB /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		5BB77E27184A796300BAA5AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5BB77E2D184A796300BAA5AB /* Varna TrafficTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Varna TrafficTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB77E2E184A796300BAA5AB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		5BB77E36184A796300BAA5AB /* Varna TrafficTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Varna TrafficTests-Info.plist"; sourceTree = "<group>"; };
 		5BB77E38184A796300BAA5AB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		5BB77E3A184A796300BAA5AB /* Varna_TrafficTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Varna_TrafficTests.m; sourceTree = "<group>"; };
+		5BB77E44184A7DEF00BAA5AB /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		5BCF244E18689BFC00E7CD6D /* OCAlgorithmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlgorithmDelegate.h; sourceTree = "<group>"; };
+		5BCF244F18689BFC00E7CD6D /* OCAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlgorithms.h; sourceTree = "<group>"; };
+		5BCF245018689BFC00E7CD6D /* OCAlgorithms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAlgorithms.m; sourceTree = "<group>"; };
+		5BCF245118689BFC00E7CD6D /* OCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAnnotation.h; sourceTree = "<group>"; };
+		5BCF245218689BFC00E7CD6D /* OCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAnnotation.m; sourceTree = "<group>"; };
+		5BCF245318689BFC00E7CD6D /* OCDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDistance.h; sourceTree = "<group>"; };
+		5BCF245418689BFC00E7CD6D /* OCDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDistance.m; sourceTree = "<group>"; };
+		5BCF245518689BFC00E7CD6D /* OCGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGrouping.h; sourceTree = "<group>"; };
+		5BCF245618689BFC00E7CD6D /* OCMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMapView.h; sourceTree = "<group>"; };
+		5BCF245718689BFC00E7CD6D /* OCMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMapView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB77E45184A7DEF00BAA5AB /* MapKit.framework in Frameworks */,
 				5BB77E0C184A796300BAA5AB /* CoreGraphics.framework in Frameworks */,
 				5BB77E0E184A796300BAA5AB /* UIKit.framework in Frameworks */,
 				5BB77E0A184A796300BAA5AB /* Foundation.framework in Frameworks */,
@@ -84,9 +110,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B64892818674C0800B553D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5B64892918674C2900B553D1 /* Station.h */,
+				5B64892A18674C2900B553D1 /* Station.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5BB77DFD184A796300BAA5AB = {
 			isa = PBXGroup;
 			children = (
+				5BCF244D18689BFC00E7CD6D /* OCMapView */,
 				5BB77E0F184A796300BAA5AB /* Varna Traffic */,
 				5BB77E34184A796300BAA5AB /* Varna TrafficTests */,
 				5BB77E08184A796300BAA5AB /* Frameworks */,
@@ -106,6 +142,7 @@
 		5BB77E08184A796300BAA5AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5BB77E44184A7DEF00BAA5AB /* MapKit.framework */,
 				5BB77E09184A796300BAA5AB /* Foundation.framework */,
 				5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */,
 				5BB77E0D184A796300BAA5AB /* UIKit.framework */,
@@ -117,14 +154,19 @@
 		5BB77E0F184A796300BAA5AB /* Varna Traffic */ = {
 			isa = PBXGroup;
 			children = (
+				5B64892818674C0800B553D1 /* Model */,
 				5BB77E18184A796300BAA5AB /* AppDelegate.h */,
 				5BB77E19184A796300BAA5AB /* AppDelegate.m */,
+				5B985F9B184B8246007699BE /* ContainerControllerSegue.h */,
+				5B985F9C184B8246007699BE /* ContainerControllerSegue.m */,
+				5B985F92184B585A007699BE /* StationsViewController.h */,
+				5B985F93184B585A007699BE /* StationsViewController.m */,
+				5B985F98184B7F6D007699BE /* StationsListViewController.h */,
+				5B985F99184B7F6D007699BE /* StationsListViewController.m */,
+				5B985F95184B7F44007699BE /* StationsMapViewController.h */,
+				5B985F96184B7F44007699BE /* StationsMapViewController.m */,
 				5BB77E1B184A796300BAA5AB /* Main_iPhone.storyboard */,
 				5BB77E1E184A796300BAA5AB /* Main_iPad.storyboard */,
-				5BB77E21184A796300BAA5AB /* FirstViewController.h */,
-				5BB77E22184A796300BAA5AB /* FirstViewController.m */,
-				5BB77E24184A796300BAA5AB /* SecondViewController.h */,
-				5BB77E25184A796300BAA5AB /* SecondViewController.m */,
 				5BB77E27184A796300BAA5AB /* Images.xcassets */,
 				5BB77E10184A796300BAA5AB /* Supporting Files */,
 			);
@@ -158,6 +200,23 @@
 				5BB77E37184A796300BAA5AB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5BCF244D18689BFC00E7CD6D /* OCMapView */ = {
+			isa = PBXGroup;
+			children = (
+				5BCF244E18689BFC00E7CD6D /* OCAlgorithmDelegate.h */,
+				5BCF244F18689BFC00E7CD6D /* OCAlgorithms.h */,
+				5BCF245018689BFC00E7CD6D /* OCAlgorithms.m */,
+				5BCF245118689BFC00E7CD6D /* OCAnnotation.h */,
+				5BCF245218689BFC00E7CD6D /* OCAnnotation.m */,
+				5BCF245318689BFC00E7CD6D /* OCDistance.h */,
+				5BCF245418689BFC00E7CD6D /* OCDistance.m */,
+				5BCF245518689BFC00E7CD6D /* OCGrouping.h */,
+				5BCF245618689BFC00E7CD6D /* OCMapView.h */,
+				5BCF245718689BFC00E7CD6D /* OCMapView.m */,
+			);
+			path = OCMapView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +317,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB77E26184A796300BAA5AB /* SecondViewController.m in Sources */,
+				5B985F9A184B7F6D007699BE /* StationsListViewController.m in Sources */,
+				5B985F94184B585A007699BE /* StationsViewController.m in Sources */,
+				5B985F97184B7F44007699BE /* StationsMapViewController.m in Sources */,
 				5BB77E1A184A796300BAA5AB /* AppDelegate.m in Sources */,
-				5BB77E23184A796300BAA5AB /* FirstViewController.m in Sources */,
+				5BCF245B18689BFC00E7CD6D /* OCMapView.m in Sources */,
+				5BCF245918689BFC00E7CD6D /* OCAnnotation.m in Sources */,
+				5B985F9D184B8246007699BE /* ContainerControllerSegue.m in Sources */,
+				5BCF245818689BFC00E7CD6D /* OCAlgorithms.m in Sources */,
+				5B64892B18674C2900B553D1 /* Station.m in Sources */,
+				5BCF245A18689BFC00E7CD6D /* OCDistance.m in Sources */,
 				5BB77E16184A796300BAA5AB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -480,6 +546,7 @@
 				5BB77E40184A796300BAA5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5BB77E41184A796300BAA5AB /* Build configuration list for PBXNativeTarget "Varna TrafficTests" */ = {
 			isa = XCConfigurationList;
@@ -488,6 +555,7 @@
 				5BB77E43184A796300BAA5AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
