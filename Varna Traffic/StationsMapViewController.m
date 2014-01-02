@@ -8,6 +8,7 @@
 
 #import "StationsMapViewController.h"
 #import "VarnaTrafficDataSource.h"
+#import "StationViewController.h"
 #import "OCAnnotation.h"
 #import "Station.h"
 #import "Device.h"
@@ -17,10 +18,11 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
 @interface StationsMapViewController ()
 
 @property (nonatomic, strong) NSArray *stations;
+@property (nonatomic, strong) Station *selectedStation;
+@property (nonatomic, strong) NSTimer *updateTimer;
 
+- (void)updateAnnotations:(NSArray *)annotations;
 - (void)updateDevices;
-- (void)showDetailsView:(UIButton *)sender;
-- (void)removeDeviceAnnotations;
 - (void)filterContentForSearchText:(NSString*)searchText;
 
 @end
@@ -30,24 +32,34 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
 
 @synthesize stations;
 
+#pragma mark - UIViewController overwrites
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
     self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
-    
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     [self.dataSource loadStations:^(NSArray *newStations) {
         self.stations = newStations;
         [self.mapView performSelectorOnMainThread:@selector(addAnnotations:) withObject:newStations waitUntilDone:NO];
     }];
     
-    [NSTimer scheduledTimerWithTimeInterval:3
-                                     target:self
-                                   selector:@selector(updateDevices)
-                                   userInfo:nil
-                                    repeats:YES
-    ];
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:3
+                                                        target:self
+                                                      selector:@selector(updateDevices)
+                                                      userInfo:nil
+                                                       repeats:YES
+                        ];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.updateTimer invalidate];
 }
 
 - (void)didReceiveMemoryWarning
@@ -56,53 +68,72 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
     // Dispose of any resources that can be recreated.
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:@"presentStationViewController"]) {
+        StationViewController *svc = (StationViewController *)[segue destinationViewController];
+        MKAnnotationView *annoView = (MKAnnotationView *)sender;
+        svc.station = annoView.annotation;
+        svc.dataSource = self.dataSource;
+    }
+}
 
+#pragma mark - MKMapViewDelegate protocol
 
 - (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)view calloutAccessoryControlTapped:(UIControl *)control
 {
-    
+    if ([view.annotation isKindOfClass:[Station class]]) {
+        [self performSegueWithIdentifier:@"presentStationViewController" sender:view];
+    }
 }
 
 - (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
 {
+    self.selectedAnnotation = view.annotation;
+    
+    NSLog(@"selected annotation: %@", view.annotation);
+    
     //start showing devices for seleted station ID
     if ([view.annotation isKindOfClass:[Station class]]) {
-        self.selectedAnnotation = view.annotation;
+        self.selectedStation = view.annotation;
         [self updateDevices];
     }
 }
+
+#pragma mark - Instance Methods
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
     //stop showing devices for seleted station ID
 }
 
-
--(void)showDetailsView:(UIButton *)sender
+- (void)updateAnnotations:(NSArray *)annotations
 {
-
-}
-
-- (void)removeDeviceAnnotations
-{
+    //remove device annotations
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self isKindOfClass: %@", [Device class]];
     NSArray *annotationsToRemove = [self.mapView.annotations filteredArrayUsingPredicate:predicate];
     [self.mapView removeAnnotations:annotationsToRemove];
+    
+    //add new annotations
+    [self.mapView addAnnotations:annotations];
+    
+    //re-select selected annotation
+    if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
+        [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
+    }
 }
 
 - (void)updateDevices
 {
-    if (self.selectedAnnotation && [self.selectedAnnotation isKindOfClass:[Station class]]) {
-        Station *station = (Station *)self.selectedAnnotation;
-        [self.dataSource loadStationDevicesWithID:station.id completionBLock:^(NSArray *devices) {
-            [self performSelectorOnMainThread:@selector(removeDeviceAnnotations) withObject:nil waitUntilDone:YES];
-            [self.mapView performSelectorOnMainThread:@selector(addAnnotations:) withObject:devices waitUntilDone:NO];
+    if (self.selectedStation) {
+        [self.dataSource loadStationDevicesWithID:self.selectedStation.id completionBLock:^(NSArray *devices) {
+            [self performSelectorOnMainThread:@selector(updateAnnotations:) withObject:devices waitUntilDone:NO];
         }];
     }
 }
 
 
-#pragma mark Content Filtering
+#pragma mark - Content Filtering
 
 - (void)filterContentForSearchText:(NSString*)searchText
 {
@@ -125,6 +156,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
     mapRegion.span.longitudeDelta = 0.015;
     
     self.selectedAnnotation = station;
+    self.selectedStation = station;
     [self.mapView setRegion:mapRegion animated:YES];
 }
 

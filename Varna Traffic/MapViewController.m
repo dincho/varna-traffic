@@ -118,11 +118,7 @@
         pinView.image = [UIImage imageNamed:@"busstop.png"];
         
         // Add a detail disclosure button to the callout.
-//        UIButton* rightButton = [UIButton buttonWithType:
-//                                 UIButtonTypeDetailDisclosure];
-//        
-//        [rightButton addTarget:self action:@selector(showDetailsView:) forControlEvents:UIControlEventTouchUpInside];
-//        pinView.rightCalloutAccessoryView = rightButton;
+        pinView.rightCalloutAccessoryView = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
         
         return pinView;
     }

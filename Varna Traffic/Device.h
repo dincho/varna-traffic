@@ -15,7 +15,8 @@
 @property (strong, nonatomic) NSNumber *line;
 @property (strong, nonatomic) NSString *arriveTime;
 @property (strong, nonatomic) NSString *delay;
-@property (strong, nonatomic) NSString *arriveIn;   
+@property (strong, nonatomic) NSString *arriveIn;
+@property (strong, nonatomic) NSString *distanceLeft;
 
 @property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;

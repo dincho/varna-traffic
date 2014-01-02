@@ -10,7 +10,7 @@
 
 @implementation Device
 
-@synthesize id, line, arriveTime, delay, arriveIn, coordinate;
+@synthesize id, line, arriveTime, delay, arriveIn, distanceLeft, coordinate;
 
 - (id)initWithDictionary:(NSDictionary *)dict
 {
@@ -20,6 +20,7 @@
         self.arriveTime = [dict objectForKey:@"arriveTime"];
         self.delay = [dict objectForKey:@"delay"];
         self.arriveIn = [dict objectForKey:@"arriveIn"];
+        self.distanceLeft = [dict objectForKey:@"distanceLeft"];
         
         coordinate.latitude = [[[dict objectForKey:@"position"] objectForKey:@"lat"] doubleValue];
         coordinate.longitude = [[[dict objectForKey:@"position"] objectForKey:@"lon"] doubleValue];
@@ -29,7 +30,7 @@
 }
 
 - (NSString *)title {
-    return [NSString stringWithFormat:@"line: %ld", [self.line integerValue]];
+    return [NSString stringWithFormat:@"#%@", self.line];
 }
 
 @end

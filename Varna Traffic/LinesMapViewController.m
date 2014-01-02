@@ -12,6 +12,7 @@
 
 @property (nonatomic, strong) NSArray *lines;
 @property (nonatomic, strong) NSString *selectedLine;
+@property (nonatomic, strong) NSTimer *updateTimer;
 
 - (void)update;
 
@@ -28,19 +29,27 @@
     
     self.lines = [NSArray arrayWithObjects:@"7", @"10", @"12", @"18", @"29", @"31", @"39",
                   @"118", @"131", @"148", @"209", @"409", nil];
-    
-    [NSTimer scheduledTimerWithTimeInterval:3
-                                     target:self
-                                   selector:@selector(update)
-                                   userInfo:nil
-                                    repeats:YES
-     ];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:3
+                                                        target:self
+                                                      selector:@selector(update)
+                                                      userInfo:nil
+                                                       repeats:YES
+                        ];
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [self.updateTimer invalidate];
 }
 
 -(void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated

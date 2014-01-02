@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" id="0z5-r6-ZlK"/>
+                    <tabBarItem key="tabBarItem" title="Info" image="info_tab" id="0z5-r6-ZlK"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvQ-zj-GDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -119,6 +119,7 @@
                     <connections>
                         <outlet property="mapView" destination="pz1-8b-yFe" id="KPo-lN-rpl"/>
                         <outlet property="searchDisplayController" destination="qh7-0N-IAc" id="eSq-fU-okX"/>
+                        <segue destination="MHO-fH-CgG" kind="push" identifier="presentStationViewController" id="gPd-7V-wZs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HZ-hT-RAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -141,6 +142,51 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="571" y="-1121"/>
+        </scene>
+        <!--Station View Controller-->
+        <scene sceneID="32k-bl-q3E">
+            <objects>
+                <tableViewController id="MHO-fH-CgG" customClass="StationViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="tmv-3f-tkg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="DeviceDetailCell" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="DeviceDetailCell" textLabel="kv4-PK-J1I" detailTextLabel="vSI-ss-P18" style="IBUITableViewCellStyleSubtitle" id="f7i-uD-8Q7">
+                                <rect key="frame" x="0.0" y="86" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f7i-uD-8Q7" id="1Qf-ms-FcZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kv4-PK-J1I">
+                                            <rect key="frame" x="15" y="3" width="34" height="22"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="vSI-ss-P18">
+                                            <rect key="frame" x="15" y="25" width="43" height="15"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MHO-fH-CgG" id="wzh-fs-JHb"/>
+                            <outlet property="delegate" destination="MHO-fH-CgG" id="XDn-MD-oCo"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="suE-o8-6IQ"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sJP-o6-9e7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1129" y="-1121"/>
         </scene>
         <!--Navigation Controller - Stations-->
         <scene sceneID="EkO-2H-2zq">
@@ -183,6 +229,7 @@
     </scenes>
     <resources>
         <image name="bus_tab" width="60" height="60"/>
+        <image name="info_tab" width="60" height="60"/>
         <image name="station_tab" width="60" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
