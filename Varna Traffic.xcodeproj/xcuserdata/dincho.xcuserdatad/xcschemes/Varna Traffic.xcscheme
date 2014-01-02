@@ -6,20 +6,20 @@
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
       <BuildActionEntries>
-	 <BuildActionEntry
-	    buildForTesting = "YES"
-	    buildForRunning = "YES"
-	    buildForProfiling = "YES"
-	    buildForArchiving = "YES"
-	    buildForAnalyzing = "YES">
-	    <BuildableReference
-	       BuildableIdentifier = "primary"
-	       BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
-	       BuildableName = "Varna Traffic.app"
-	       BlueprintName = "Varna Traffic"
-	       ReferencedContainer = "container:Varna Traffic.xcodeproj">
-	    </BuildableReference>
-	 </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
+               BuildableName = "Varna Traffic.app"
+               BlueprintName = "Varna Traffic"
+               ReferencedContainer = "container:Varna Traffic.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -28,25 +28,25 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-	 <TestableReference
-	    skipped = "NO">
-	    <BuildableReference
-	       BuildableIdentifier = "primary"
-	       BlueprintIdentifier = "5BB77E2C184A796300BAA5AB"
-	       BuildableName = "Varna TrafficTests.xctest"
-	       BlueprintName = "Varna TrafficTests"
-	       ReferencedContainer = "container:Varna Traffic.xcodeproj">
-	    </BuildableReference>
-	 </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "5BB77E2C184A796300BAA5AB"
+               BuildableName = "Varna TrafficTests.xctest"
+               BlueprintName = "Varna TrafficTests"
+               ReferencedContainer = "container:Varna Traffic.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
-	 <BuildableReference
-	    BuildableIdentifier = "primary"
-	    BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
-	    BuildableName = "Varna Traffic.app"
-	    BlueprintName = "Varna Traffic"
-	    ReferencedContainer = "container:Varna Traffic.xcodeproj">
-	 </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
+            BuildableName = "Varna Traffic.app"
+            BlueprintName = "Varna Traffic"
+            ReferencedContainer = "container:Varna Traffic.xcodeproj">
+         </BuildableReference>
       </MacroExpansion>
    </TestAction>
    <LaunchAction
@@ -59,13 +59,13 @@
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
       <BuildableProductRunnable>
-	 <BuildableReference
-	    BuildableIdentifier = "primary"
-	    BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
-	    BuildableName = "Varna Traffic.app"
-	    BlueprintName = "Varna Traffic"
-	    ReferencedContainer = "container:Varna Traffic.xcodeproj">
-	 </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
+            BuildableName = "Varna Traffic.app"
+            BlueprintName = "Varna Traffic"
+            ReferencedContainer = "container:Varna Traffic.xcodeproj">
+         </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
@@ -77,13 +77,13 @@
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
       <BuildableProductRunnable>
-	 <BuildableReference
-	    BuildableIdentifier = "primary"
-	    BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
-	    BuildableName = "Varna Traffic.app"
-	    BlueprintName = "Varna Traffic"
-	    ReferencedContainer = "container:Varna Traffic.xcodeproj">
-	 </BuildableReference>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "5BB77E05184A796300BAA5AB"
+            BuildableName = "Varna Traffic.app"
+            BlueprintName = "Varna Traffic"
+            ReferencedContainer = "container:Varna Traffic.xcodeproj">
+         </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction

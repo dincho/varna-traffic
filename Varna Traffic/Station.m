@@ -15,11 +15,11 @@
 - (id)initWithDictionary:(NSDictionary *)dict
 {
     if (self = [super init]) {
-	self.id = [dict valueForKey:@"id"];
-	self.name = [dict valueForKey:@"text"];
+	self.id = [dict objectForKey:@"id"];
+	self.name = [dict objectForKey:@"text"];
 
-	coordinate.latitude = [[[dict valueForKey:@"position"] valueForKey:@"lat"] doubleValue];
-	coordinate.longitude = [[[dict valueForKey:@"position"] valueForKey:@"lon"] doubleValue];
+	coordinate.latitude = [[[dict objectForKey:@"position"] objectForKey:@"lat"] doubleValue];
+	coordinate.longitude = [[[dict objectForKey:@"position"] objectForKey:@"lon"] doubleValue];
     }
 
     return self;

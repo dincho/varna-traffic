@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <MapKit/MapKit.h>
-#import "StationsViewController.h"
+#import "MapViewController.h"
 #import "OCMapView.h"
 
-@interface StationsMapViewController : UIViewController <MKMapViewDelegate>
+@interface StationsMapViewController : MapViewController
 
-@property (nonatomic, strong) NSObject<TrafficDataSource> *dataSource;
 @property (weak, nonatomic) IBOutlet OCMapView *mapView;
 
 @end

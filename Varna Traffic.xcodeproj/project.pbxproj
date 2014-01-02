@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B3F9E091871A60D003E437C /* VarnaTrafficDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */; };
+		5B3F9E0C187214C1003E437C /* LinesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E0B187214C1003E437C /* LinesMapViewController.m */; };
+		5B3F9E0F18721554003E437C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E0E18721554003E437C /* MapViewController.m */; };
 		5B64892B18674C2900B553D1 /* Station.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B64892A18674C2900B553D1 /* Station.m */; };
-		5B985F94184B585A007699BE /* StationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F93184B585A007699BE /* StationsViewController.m */; };
+		5B6625ED1870601700087995 /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B6625EC1870601700087995 /* Device.m */; };
 		5B985F97184B7F44007699BE /* StationsMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F96184B7F44007699BE /* StationsMapViewController.m */; };
-		5B985F9A184B7F6D007699BE /* StationsListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F99184B7F6D007699BE /* StationsListViewController.m */; };
-		5B985F9D184B8246007699BE /* ContainerControllerSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B985F9C184B8246007699BE /* ContainerControllerSegue.m */; };
 		5BB77E0A184A796300BAA5AB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E09184A796300BAA5AB /* Foundation.framework */; };
 		5BB77E0C184A796300BAA5AB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */; };
 		5BB77E0E184A796300BAA5AB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB77E0D184A796300BAA5AB /* UIKit.framework */; };
@@ -44,16 +45,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B3F9E061871A5B9003E437C /* TrafficDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficDataSource.h; sourceTree = "<group>"; };
+		5B3F9E071871A60D003E437C /* VarnaTrafficDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarnaTrafficDataSource.h; sourceTree = "<group>"; };
+		5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VarnaTrafficDataSource.m; sourceTree = "<group>"; };
+		5B3F9E0A187214C1003E437C /* LinesMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinesMapViewController.h; sourceTree = "<group>"; };
+		5B3F9E0B187214C1003E437C /* LinesMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LinesMapViewController.m; sourceTree = "<group>"; };
+		5B3F9E0D18721554003E437C /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		5B3F9E0E18721554003E437C /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		5B64892918674C2900B553D1 /* Station.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Station.h; sourceTree = "<group>"; };
 		5B64892A18674C2900B553D1 /* Station.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Station.m; sourceTree = "<group>"; };
-		5B985F92184B585A007699BE /* StationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsViewController.h; sourceTree = "<group>"; };
-		5B985F93184B585A007699BE /* StationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsViewController.m; sourceTree = "<group>"; };
+		5B6625EB1870601700087995 /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		5B6625EC1870601700087995 /* Device.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Device.m; sourceTree = "<group>"; };
 		5B985F95184B7F44007699BE /* StationsMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsMapViewController.h; sourceTree = "<group>"; };
 		5B985F96184B7F44007699BE /* StationsMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsMapViewController.m; sourceTree = "<group>"; };
-		5B985F98184B7F6D007699BE /* StationsListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StationsListViewController.h; sourceTree = "<group>"; };
-		5B985F99184B7F6D007699BE /* StationsListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StationsListViewController.m; sourceTree = "<group>"; };
-		5B985F9B184B8246007699BE /* ContainerControllerSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContainerControllerSegue.h; sourceTree = "<group>"; };
-		5B985F9C184B8246007699BE /* ContainerControllerSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContainerControllerSegue.m; sourceTree = "<group>"; };
 		5BB77E06184A796300BAA5AB /* Varna Traffic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Varna Traffic.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB77E09184A796300BAA5AB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -115,6 +119,8 @@
 			children = (
 				5B64892918674C2900B553D1 /* Station.h */,
 				5B64892A18674C2900B553D1 /* Station.m */,
+				5B6625EB1870601700087995 /* Device.h */,
+				5B6625EC1870601700087995 /* Device.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -157,18 +163,19 @@
 				5B64892818674C0800B553D1 /* Model */,
 				5BB77E18184A796300BAA5AB /* AppDelegate.h */,
 				5BB77E19184A796300BAA5AB /* AppDelegate.m */,
-				5B985F9B184B8246007699BE /* ContainerControllerSegue.h */,
-				5B985F9C184B8246007699BE /* ContainerControllerSegue.m */,
-				5B985F92184B585A007699BE /* StationsViewController.h */,
-				5B985F93184B585A007699BE /* StationsViewController.m */,
-				5B985F98184B7F6D007699BE /* StationsListViewController.h */,
-				5B985F99184B7F6D007699BE /* StationsListViewController.m */,
+				5B3F9E0D18721554003E437C /* MapViewController.h */,
+				5B3F9E0E18721554003E437C /* MapViewController.m */,
 				5B985F95184B7F44007699BE /* StationsMapViewController.h */,
 				5B985F96184B7F44007699BE /* StationsMapViewController.m */,
+				5B3F9E0A187214C1003E437C /* LinesMapViewController.h */,
+				5B3F9E0B187214C1003E437C /* LinesMapViewController.m */,
 				5BB77E1B184A796300BAA5AB /* Main_iPhone.storyboard */,
 				5BB77E1E184A796300BAA5AB /* Main_iPad.storyboard */,
 				5BB77E27184A796300BAA5AB /* Images.xcassets */,
 				5BB77E10184A796300BAA5AB /* Supporting Files */,
+				5B3F9E061871A5B9003E437C /* TrafficDataSource.h */,
+				5B3F9E071871A60D003E437C /* VarnaTrafficDataSource.h */,
+				5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */,
 			);
 			path = "Varna Traffic";
 			sourceTree = "<group>";
@@ -317,13 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B985F9A184B7F6D007699BE /* StationsListViewController.m in Sources */,
-				5B985F94184B585A007699BE /* StationsViewController.m in Sources */,
+				5B3F9E091871A60D003E437C /* VarnaTrafficDataSource.m in Sources */,
 				5B985F97184B7F44007699BE /* StationsMapViewController.m in Sources */,
+				5B6625ED1870601700087995 /* Device.m in Sources */,
+				5B3F9E0F18721554003E437C /* MapViewController.m in Sources */,
 				5BB77E1A184A796300BAA5AB /* AppDelegate.m in Sources */,
+				5B3F9E0C187214C1003E437C /* LinesMapViewController.m in Sources */,
 				5BCF245B18689BFC00E7CD6D /* OCMapView.m in Sources */,
 				5BCF245918689BFC00E7CD6D /* OCAnnotation.m in Sources */,
-				5B985F9D184B8246007699BE /* ContainerControllerSegue.m in Sources */,
 				5BCF245818689BFC00E7CD6D /* OCAlgorithms.m in Sources */,
 				5B64892B18674C2900B553D1 /* Station.m in Sources */,
 				5BCF245A18689BFC00E7CD6D /* OCDistance.m in Sources */,

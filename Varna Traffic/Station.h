@@ -14,7 +14,6 @@
 @property (strong, nonatomic) NSString *id;
 @property (strong, nonatomic) NSString *name;
 
-@property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (id)initWithDictionary:(NSDictionary *)dict;
