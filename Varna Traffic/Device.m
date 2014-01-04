@@ -10,7 +10,8 @@
 
 @implementation Device
 
-@synthesize id, line, arriveTime, delay, arriveIn, distanceLeft, coordinate;
+@synthesize id, line, arriveTime, delay, arriveIn, distanceLeft, stationId, nextStationId, coordinate;
+@synthesize station, nextStation;
 
 - (id)initWithDictionary:(NSDictionary *)dict
 {
@@ -21,6 +22,8 @@
         self.delay = [dict objectForKey:@"delay"];
         self.arriveIn = [dict objectForKey:@"arriveIn"];
         self.distanceLeft = [dict objectForKey:@"distanceLeft"];
+        self.stationId = [dict objectForKey:@"stationId"];
+        self.nextStationId = [dict objectForKey:@"nextStationId"];
         
         coordinate.latitude = [[[dict objectForKey:@"position"] objectForKey:@"lat"] doubleValue];
         coordinate.longitude = [[[dict objectForKey:@"position"] objectForKey:@"lon"] doubleValue];
@@ -29,8 +32,26 @@
     return self;
 }
 
-- (NSString *)title {
-    return [NSString stringWithFormat:@"#%@", self.line];
+- (NSString *)title
+{
+    if (self.nextStation) {
+        return [NSString stringWithFormat:@"%@", self.nextStation.title];
+    } else if (self.line) {
+        return [NSString stringWithFormat:@"#%@", self.line];
+    } else {
+        return nil;
+    }
+}
+
+- (NSString *)subtitle
+{
+    NSString *subtitle = [NSString stringWithFormat:@"%@ (%@)", self.arriveTime, self.delay];
+    
+    if (self.arriveIn) {
+        subtitle = [NSString stringWithFormat:@"%@, after: %@", subtitle, self.arriveIn];
+    }
+    
+    return subtitle;
 }
 
 @end

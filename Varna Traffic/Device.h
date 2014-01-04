@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
+#import "VTAnnotation.h"
+#import "Station.h"
 
-@interface Device : NSObject <MKAnnotation>
+@interface Device : VTAnnotation
 
 @property (strong, nonatomic) NSNumber *id;
 @property (strong, nonatomic) NSNumber *line;
@@ -17,8 +18,11 @@
 @property (strong, nonatomic) NSString *delay;
 @property (strong, nonatomic) NSString *arriveIn;
 @property (strong, nonatomic) NSString *distanceLeft;
+@property (strong, nonatomic) NSNumber *stationId;
+@property (strong, nonatomic) NSNumber *nextStationId;
+@property (strong, nonatomic) Station *station;
+@property (strong, nonatomic) Station *nextStation;
 
-@property (nonatomic, readonly, copy) NSString *title;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
 
 - (id)initWithDictionary:(NSDictionary *)dict;

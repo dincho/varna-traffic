@@ -7,11 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Station.h"
 
 @protocol TrafficDataSource <NSObject>
 
 - (void)loadStations:(void (^)(NSArray *stations))completionBlock;
-- (void)loadStationDevicesWithID:(NSString *)stationID completionBLock:(void (^)(NSArray *devices))completionBlock;
+- (void)loadStationDevicesWithID:(Station *)station completionBLock:(void (^)(NSArray *devices))completionBlock;
 - (void)loadLineWithID:(NSString *)lineID completionBLock:(void (^)(NSDictionary *result))completionBlock;
 
 @end

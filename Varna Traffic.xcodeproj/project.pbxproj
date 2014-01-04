@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B2F930818789A6D0085F8AD /* VTAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F930718789A6D0085F8AD /* VTAnnotation.m */; };
 		5B3F9E091871A60D003E437C /* VarnaTrafficDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */; };
 		5B3F9E0C187214C1003E437C /* LinesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E0B187214C1003E437C /* LinesMapViewController.m */; };
 		5B3F9E0F18721554003E437C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E0E18721554003E437C /* MapViewController.m */; };
@@ -46,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B2F930618789A6D0085F8AD /* VTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAnnotation.h; sourceTree = "<group>"; };
+		5B2F930718789A6D0085F8AD /* VTAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAnnotation.m; sourceTree = "<group>"; };
 		5B3F9E061871A5B9003E437C /* TrafficDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficDataSource.h; sourceTree = "<group>"; };
 		5B3F9E071871A60D003E437C /* VarnaTrafficDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarnaTrafficDataSource.h; sourceTree = "<group>"; };
 		5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VarnaTrafficDataSource.m; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				5B64892A18674C2900B553D1 /* Station.m */,
 				5B6625EB1870601700087995 /* Device.h */,
 				5B6625EC1870601700087995 /* Device.m */,
+				5B2F930618789A6D0085F8AD /* VTAnnotation.h */,
+				5B2F930718789A6D0085F8AD /* VTAnnotation.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -341,6 +346,7 @@
 				5BCF245818689BFC00E7CD6D /* OCAlgorithms.m in Sources */,
 				5B64892B18674C2900B553D1 /* Station.m in Sources */,
 				5BCF245A18689BFC00E7CD6D /* OCDistance.m in Sources */,
+				5B2F930818789A6D0085F8AD /* VTAnnotation.m in Sources */,
 				5BB77E16184A796300BAA5AB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

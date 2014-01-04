@@ -7,14 +7,17 @@
 //
 
 #import "LinesMapViewController.h"
+#import "Device.h"
 
 @interface LinesMapViewController ()
 
 @property (nonatomic, strong) NSArray *lines;
 @property (nonatomic, strong) NSString *selectedLine;
 @property (nonatomic, strong) NSTimer *updateTimer;
+@property (nonatomic, assign) BOOL shouldUpdateStations;
 
 - (void)update;
+- (void)dataLoaded:(NSDictionary *)result;
 
 @end
 
@@ -27,7 +30,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.lines = [NSArray arrayWithObjects:@"7", @"10", @"12", @"18", @"29", @"31", @"39",
+    self.lines = [NSArray arrayWithObjects:@"7", @"10", @"13", @"18", @"29", @"31", @"39",
                   @"118", @"131", @"148", @"209", @"409", nil];
 }
 
@@ -39,6 +42,7 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    self.shouldUpdateStations = YES;
     self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:3
                                                         target:self
                                                       selector:@selector(update)
@@ -93,25 +97,49 @@
     [self.searchDisplayController setActive:NO animated:YES];
 }
 
+- (void)dataLoaded:(NSDictionary *)result
+{
+    NSLog(@"update staions");
+    
+    if (self.shouldUpdateStations) {
+        [self.mapView removeAnnotations:self.mapView.annotations];
+        [self.mapView addAnnotations:[result objectForKey:@"stations"]];
+        self.shouldUpdateStations = NO; //updated.
+    } else {
+        //remove only devices
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self isKindOfClass: %@", [Device class]];
+        NSArray *annotationsToRemove = [self.mapView.annotations filteredArrayUsingPredicate:predicate];
+        [self.mapView removeAnnotations:annotationsToRemove];
+    }
+    
+    [self.mapView addAnnotations:[result objectForKey:@"devices"]];
+    
+    if ([self.selectedAnnotation isKindOfClass:[Device class]]) {
+        Device *selectedDevice = (Device *) self.selectedAnnotation;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self isKindOfClass: %@ AND id == %@", [VTAnnotation class], selectedDevice.id];
+        NSArray *foundAnnotations = [self.mapView.annotations filteredArrayUsingPredicate:predicate];
+        if ([foundAnnotations count] > 0) {
+            [self.mapView selectAnnotation:[foundAnnotations firstObject] animated:NO];
+        }
+    } else {
+        if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
+            [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
+        }
+    }
+}
+
 - (void)update
 {
     if (!self.selectedLine) {
         return;
     }
     
-    [self.dataSource loadLineWithID:self.selectedLine completionBLock:^(NSDictionary *result) {
-        NSArray *stations = [result objectForKey:@"stations"];
-        NSArray *devices = [result objectForKey:@"devices"];
-        
-        NSLog(@"stations: %@", stations);
-        [self.mapView removeAnnotations:self.mapView.annotations];
-        [self.mapView performSelectorOnMainThread:@selector(addAnnotations:) withObject:stations waitUntilDone:NO];
-        [self.mapView performSelectorOnMainThread:@selector(addAnnotations:) withObject:devices waitUntilDone:NO];
+    [self.dataSource loadLineWithID:self.selectedLine completionBLock:^(NSDictionary *result) {        
+        [self performSelectorOnMainThread:@selector(dataLoaded:) withObject:result waitUntilDone:NO];
     }];
     
-    if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
-        [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
-    }
+
+
     
     //    MKCoordinateRegion mapRegion;
     //    mapRegion.center = station.coordinate;

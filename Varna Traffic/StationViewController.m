@@ -43,7 +43,7 @@
     
     self.title = station.title;
     
-    [self.dataSource loadStationDevicesWithID:self.station.id completionBLock:^(NSArray *newDevices) {
+    [self.dataSource loadStationDevicesWithID:self.station completionBLock:^(NSArray *newDevices) {
         self.devices = newDevices;
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }];
@@ -72,7 +72,7 @@
 
 - (void)updateDevices
 {
-    [self.dataSource loadStationDevicesWithID:self.station.id completionBLock:^(NSArray *newDevices) {
+    [self.dataSource loadStationDevicesWithID:self.station completionBLock:^(NSArray *newDevices) {
         self.devices = newDevices;
         [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     }];

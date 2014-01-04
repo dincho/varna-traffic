@@ -7,11 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <MapKit/MapKit.h>
+#import "VTAnnotation.h"
 
-@interface Station : NSObject <MKAnnotation>
+@interface Station : VTAnnotation
 
-@property (strong, nonatomic) NSString *id;
+@property (strong, nonatomic) NSNumber *id;
 @property (strong, nonatomic) NSString *name;
 
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;

@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Info-->
+        <!--View Controller-->
         <scene sceneID="sTv-8V-QGW">
             <objects>
                 <viewController id="k4H-cg-WXa" sceneMemberID="viewController">
@@ -15,13 +15,31 @@
                     <view key="view" contentMode="scaleToFill" id="A1F-FB-xuj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MUz-AX-vI1">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="518"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Приложението е разработено от Севдалин Тодоров Тодоров. Ф.№ 106071
+ </string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Info" image="info_tab" id="0z5-r6-ZlK"/>
+                    <navigationItem key="navigationItem" id="Mmy-X1-dNk"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvQ-zj-GDp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-9" y="524"/>
+            <point key="canvasLocation" x="517" y="524"/>
         </scene>
         <!--Lines Map View Controller-->
         <scene sceneID="awe-ut-flm">
@@ -86,7 +104,7 @@
                     <connections>
                         <segue destination="BJ5-ms-gOZ" kind="relationship" relationship="viewControllers" id="Udx-zM-cRC"/>
                         <segue destination="TVk-lU-Za9" kind="relationship" relationship="viewControllers" id="dHO-1X-PjZ"/>
-                        <segue destination="k4H-cg-WXa" kind="relationship" relationship="viewControllers" id="c44-JV-wxG"/>
+                        <segue destination="kX7-dJ-xlF" kind="relationship" relationship="viewControllers" id="c44-JV-wxG"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNP-y4-bzi" sceneMemberID="firstResponder"/>
@@ -225,6 +243,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Dgy-Yj-oRE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52" y="-309"/>
+        </scene>
+        <!--Navigation Controller - Info-->
+        <scene sceneID="bGg-yj-LWd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kX7-dJ-xlF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Info" image="info_tab" id="0z5-r6-ZlK"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nu-Pe-q8U">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="k4H-cg-WXa" kind="relationship" relationship="rootViewController" id="Ula-7c-7j2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wY6-1R-9hm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9" y="524"/>
         </scene>
     </scenes>
     <resources>

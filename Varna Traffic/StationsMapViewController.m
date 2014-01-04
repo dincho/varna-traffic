@@ -24,6 +24,8 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
 - (void)updateAnnotations:(NSArray *)annotations;
 - (void)updateDevices;
 - (void)filterContentForSearchText:(NSString*)searchText;
+- (void)startUpdating;
+- (void)stopUpdating;
 
 @end
 
@@ -40,6 +42,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
 	// Do any additional setup after loading the view.
 
     self.mapView.clusterSize = kDEFAULTCLUSTERSIZE;
+    self.mapView.minLongitudeDeltaToCluster = 0.02;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -49,17 +52,12 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
         [self.mapView performSelectorOnMainThread:@selector(addAnnotations:) withObject:newStations waitUntilDone:NO];
     }];
     
-    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:3
-                                                        target:self
-                                                      selector:@selector(updateDevices)
-                                                      userInfo:nil
-                                                       repeats:YES
-                        ];
+    [self startUpdating];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    [self.updateTimer invalidate];
+    [self stopUpdating];
 }
 
 - (void)didReceiveMemoryWarning
@@ -96,15 +94,41 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
     //start showing devices for seleted station ID
     if ([view.annotation isKindOfClass:[Station class]]) {
         self.selectedStation = view.annotation;
-        [self updateDevices];
+        [self startUpdating];
+    } else if([view.annotation isKindOfClass:[OCAnnotation class]]) {
+        [self stopUpdating];
     }
 }
-
-#pragma mark - Instance Methods
 
 - (void)mapView:(MKMapView *)mapView didDeselectAnnotationView:(MKAnnotationView *)view
 {
     //stop showing devices for seleted station ID
+}
+
+#pragma mark - Instance Methods
+
+- (void)startUpdating
+{
+    if (nil != self.updateTimer) {
+        [self.updateTimer invalidate];
+    }
+    
+    [self updateDevices];
+    
+    self.updateTimer = [NSTimer scheduledTimerWithTimeInterval:3
+                                                        target:self
+                                                      selector:@selector(updateDevices)
+                                                      userInfo:nil
+                                                       repeats:YES
+                        ];
+}
+
+- (void)stopUpdating
+{
+    if (nil != self.updateTimer) {
+        [self.updateTimer invalidate];
+        self.updateTimer = nil;
+    }
 }
 
 - (void)updateAnnotations:(NSArray *)annotations
@@ -114,19 +138,35 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
     NSArray *annotationsToRemove = [self.mapView.annotations filteredArrayUsingPredicate:predicate];
     [self.mapView removeAnnotations:annotationsToRemove];
     
+    //don't cluster devices
+    self.mapView.annotationsToIgnore = [NSMutableSet setWithArray:annotations];
+    
     //add new annotations
     [self.mapView addAnnotations:annotations];
     
-    //re-select selected annotation
-    if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
-        [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
+    if ([self.selectedAnnotation isKindOfClass:[Device class]]) {
+        Device *selectedDevice = (Device *) self.selectedAnnotation;
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self isKindOfClass: %@ AND id == %@", [VTAnnotation class], selectedDevice.id];
+        NSArray *foundAnnotations = [self.mapView.annotations filteredArrayUsingPredicate:predicate];
+        if ([foundAnnotations count] > 0) {
+            [self.mapView selectAnnotation:[foundAnnotations firstObject] animated:NO];
+        }
+    } else {
+        if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
+            [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
+        }
     }
+    
+    //re-select selected annotation
+//    if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
+//        [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
+//    }
 }
 
 - (void)updateDevices
 {
     if (self.selectedStation) {
-        [self.dataSource loadStationDevicesWithID:self.selectedStation.id completionBLock:^(NSArray *devices) {
+        [self.dataSource loadStationDevicesWithID:self.selectedStation completionBLock:^(NSArray *devices) {
             [self performSelectorOnMainThread:@selector(updateAnnotations:) withObject:devices waitUntilDone:NO];
         }];
     }

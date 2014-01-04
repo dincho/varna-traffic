@@ -43,11 +43,11 @@
     }];
 }
 
-- (void)loadStationDevicesWithID:(NSString *)stationID completionBLock:(void (^)(NSArray *devices))completionBlock
+- (void)loadStationDevicesWithID:(Station *)station completionBLock:(void (^)(NSArray *devices))completionBlock
 {
-    NSLog(@"loadStationDevicesWithID: %@", stationID);
+    NSLog(@"loadStationDevicesWithID: %@", station.id);
     
-    NSString *urlString = [NSString stringWithFormat:@"http://varnatraffic.com/Ajax/FindStationDevices?stationId=%@", stationID];
+    NSString *urlString = [NSString stringWithFormat:@"http://varnatraffic.com/Ajax/FindStationDevices?stationId=%@", station.id];
     NSURL *url = [NSURL URLWithString:urlString];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
@@ -111,6 +111,7 @@
         
         NSMutableArray *newDevices = [NSMutableArray array];
         for (NSDictionary *deviceDict in devices) {
+            NSLog(@"deviceDict: %@", deviceDict);
             Device *device = [[Device alloc] initWithDictionary:deviceDict];
             [newDevices insertObject:device atIndex:[newDevices count]];
         }
@@ -123,6 +124,19 @@
         for (NSDictionary *stationDict in stations) {
             Station *station = [[Station alloc] initWithDictionary:stationDict];
             [newStations insertObject:station atIndex:[newStations count]];
+        }
+        
+        //map stations to devices
+        NSPredicate *predicate;
+        NSArray *stationsFound;
+        for (Device *device in newDevices) {
+            predicate = [NSPredicate predicateWithFormat:@"id == %@", device.nextStationId];
+            stationsFound = [newStations filteredArrayUsingPredicate:predicate];
+            device.nextStation = [stationsFound firstObject];
+
+            predicate = [NSPredicate predicateWithFormat:@"id == %@", device.stationId];
+            stationsFound = [newStations filteredArrayUsingPredicate:predicate];
+            device.station = [stationsFound firstObject];
         }
         
         NSDictionary *result = @{
