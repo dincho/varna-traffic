@@ -190,4 +190,16 @@ shouldReloadTableForSearchString:(NSString *)searchString
     return YES;
 }
 
+//preload initial results table with all data
+-(void)searchDisplayControllerDidBeginSearch:(UISearchDisplayController *)controller
+{
+    [controller.searchBar.delegate searchBar:controller.searchBar textDidChange:@" "];
+}
+
+-(void)searchDisplayController:(UISearchDisplayController *)controller
+ didHideSearchResultsTableView:(UITableView *)tableView
+{
+    [controller.searchBar.delegate searchBar:controller.searchBar textDidChange:@" "];
+}
+
 @end

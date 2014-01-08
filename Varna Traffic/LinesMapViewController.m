@@ -81,7 +81,7 @@
     static NSString *CellIdentifier = @"AnnotationCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    NSString *line = [self.filteredArray objectAtIndex:indexPath.row];
+    NSString *line = [NSString stringWithFormat:@"#%@", [self.filteredArray objectAtIndex:indexPath.row]];
     
     cell.textLabel.text = line;
     
@@ -92,9 +92,13 @@
 
 - (void)filterContentForSearchText:(NSString*)searchText
 {
-    // Filter the array using NSPredicate
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchText];
-    self.filteredArray = [self.lines filteredArrayUsingPredicate:predicate];
+    if ([searchText isEqualToString:@" "]) {
+        self.filteredArray = self.lines;
+    } else {
+        // Filter the array using NSPredicate
+        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF CONTAINS[cd] %@", searchText];
+        self.filteredArray = [self.lines filteredArrayUsingPredicate:predicate];
+    }
 }
 
 #pragma mark - UISearchDisplayController Delegate Methods
