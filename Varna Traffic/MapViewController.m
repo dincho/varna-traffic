@@ -11,10 +11,7 @@
 #import "Device.h"
 #import "Station.h"
 
-
-
 @interface MapViewController ()
-
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
@@ -61,7 +58,6 @@
 
 -(void)mapView:(OCMapView *)mapView regionDidChangeAnimated:(BOOL)animated
 {
-    NSLog(@"new region span: %f, %f", mapView.region.span.latitudeDelta, mapView.region.span.latitudeDelta);
     if (mapView.region.span.latitudeDelta < 0.02) {
         mapView.clusteringEnabled = NO;
     } else {

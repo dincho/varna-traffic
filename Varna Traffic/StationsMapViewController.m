@@ -89,8 +89,6 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
 {
     self.selectedAnnotation = view.annotation;
     
-    NSLog(@"selected annotation: %@", view.annotation);
-    
     //start showing devices for seleted station ID
     if ([view.annotation isKindOfClass:[Station class]]) {
         self.selectedStation = view.annotation;
@@ -156,11 +154,6 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
             [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
         }
     }
-    
-    //re-select selected annotation
-//    if ([self.mapView.annotations containsObject:self.selectedAnnotation]) {
-//        [self.mapView selectAnnotation:self.selectedAnnotation animated:YES];
-//    }
 }
 
 - (void)updateDevices

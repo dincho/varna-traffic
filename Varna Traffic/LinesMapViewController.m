@@ -107,8 +107,6 @@
 
 - (void)dataLoaded:(NSDictionary *)result
 {
-    NSLog(@"update staions");
-    
     if (self.shouldUpdateStations) {
         [self.mapView removeAnnotations:self.mapView.annotations];
         [self.mapView addAnnotations:[result objectForKey:@"stations"]];
@@ -145,17 +143,6 @@
     [self.dataSource loadLineWithID:self.selectedLine completionBLock:^(NSDictionary *result) {        
         [self performSelectorOnMainThread:@selector(dataLoaded:) withObject:result waitUntilDone:NO];
     }];
-    
-
-
-    
-    //    MKCoordinateRegion mapRegion;
-    //    mapRegion.center = station.coordinate;
-    //    mapRegion.span.latitudeDelta = 0.015;
-    //    mapRegion.span.longitudeDelta = 0.015;
-    //
-    //    self.selectedAnnotation = station;
-    //    [self.mapView setRegion:mapRegion animated:YES];
 }
 
 @end

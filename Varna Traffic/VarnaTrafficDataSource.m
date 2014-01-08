@@ -14,8 +14,6 @@
 
 - (void)loadStations:(void (^)(NSArray *stations))completionBlock
 {
-    NSLog(@"loadStations");
-    
     NSURL *url = [NSURL URLWithString:@"http://varnatraffic.com/Ajax/GetStations"];
     
     NSURLRequest *urlRequest = [NSURLRequest requestWithURL:url];
@@ -45,8 +43,6 @@
 
 - (void)loadStationDevicesWithID:(Station *)station completionBLock:(void (^)(NSArray *devices))completionBlock
 {
-    NSLog(@"loadStationDevicesWithID: %@", station.id);
-    
     NSString *urlString = [NSString stringWithFormat:@"http://varnatraffic.com/Ajax/FindStationDevices?stationId=%@", station.id];
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -67,8 +63,6 @@
         NSMutableArray *newDevices = [NSMutableArray array];
         NSDictionary *devicesDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
         
-        //NSLog(@"devices: %@", [devicesDict objectForKey:@"liveData"]);
-        
         for (NSDictionary *deviceDict in [devicesDict objectForKey:@"liveData"]) {
             if ([deviceDict objectForKey:@"arriveIn"]) {
                 Device *device = [[Device alloc] initWithDictionary:deviceDict];
@@ -84,8 +78,6 @@
 
 - (void)loadLineWithID:(NSString *)lineID completionBLock:(void (^)(NSDictionary *result))completionBlock
 {
-    NSLog(@"loadLineWithID: %@", lineID);
-    
     NSString *urlString = [NSString stringWithFormat:@"http://varnatraffic.com/Ajax/GetLineState?line=%@", lineID];
     NSURL *url = [NSURL URLWithString:urlString];
     
@@ -111,7 +103,6 @@
         
         NSMutableArray *newDevices = [NSMutableArray array];
         for (NSDictionary *deviceDict in devices) {
-            NSLog(@"deviceDict: %@", deviceDict);
             Device *device = [[Device alloc] initWithDictionary:deviceDict];
             [newDevices insertObject:device atIndex:[newDevices count]];
         }
