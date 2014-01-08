@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5B2F930818789A6D0085F8AD /* VTAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B2F930718789A6D0085F8AD /* VTAnnotation.m */; };
+		5B383E3C187E080B00769176 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B383E3B187E080B00769176 /* Reachability.m */; };
+		5B383E3E187E085D00769176 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B383E3D187E085D00769176 /* SystemConfiguration.framework */; };
 		5B3F9E091871A60D003E437C /* VarnaTrafficDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */; };
 		5B3F9E0C187214C1003E437C /* LinesMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E0B187214C1003E437C /* LinesMapViewController.m */; };
 		5B3F9E0F18721554003E437C /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5B3F9E0E18721554003E437C /* MapViewController.m */; };
@@ -49,6 +51,9 @@
 /* Begin PBXFileReference section */
 		5B2F930618789A6D0085F8AD /* VTAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VTAnnotation.h; sourceTree = "<group>"; };
 		5B2F930718789A6D0085F8AD /* VTAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VTAnnotation.m; sourceTree = "<group>"; };
+		5B383E3A187E080B00769176 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		5B383E3B187E080B00769176 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		5B383E3D187E085D00769176 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5B3F9E061871A5B9003E437C /* TrafficDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrafficDataSource.h; sourceTree = "<group>"; };
 		5B3F9E071871A60D003E437C /* VarnaTrafficDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VarnaTrafficDataSource.h; sourceTree = "<group>"; };
 		5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VarnaTrafficDataSource.m; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B383E3E187E085D00769176 /* SystemConfiguration.framework in Frameworks */,
 				5BB77E45184A7DEF00BAA5AB /* MapKit.framework in Frameworks */,
 				5BB77E0C184A796300BAA5AB /* CoreGraphics.framework in Frameworks */,
 				5BB77E0E184A796300BAA5AB /* UIKit.framework in Frameworks */,
@@ -156,6 +162,7 @@
 		5BB77E08184A796300BAA5AB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B383E3D187E085D00769176 /* SystemConfiguration.framework */,
 				5BB77E44184A7DEF00BAA5AB /* MapKit.framework */,
 				5BB77E09184A796300BAA5AB /* Foundation.framework */,
 				5BB77E0B184A796300BAA5AB /* CoreGraphics.framework */,
@@ -186,6 +193,8 @@
 				5B3F9E081871A60D003E437C /* VarnaTrafficDataSource.m */,
 				5B6EE53C1875B4A6004C29AE /* StationViewController.h */,
 				5B6EE53D1875B4A6004C29AE /* StationViewController.m */,
+				5B383E3A187E080B00769176 /* Reachability.h */,
+				5B383E3B187E080B00769176 /* Reachability.m */,
 			);
 			path = "Varna Traffic";
 			sourceTree = "<group>";
@@ -338,6 +347,7 @@
 				5B985F97184B7F44007699BE /* StationsMapViewController.m in Sources */,
 				5B6625ED1870601700087995 /* Device.m in Sources */,
 				5B3F9E0F18721554003E437C /* MapViewController.m in Sources */,
+				5B383E3C187E080B00769176 /* Reachability.m in Sources */,
 				5BB77E1A184A796300BAA5AB /* AppDelegate.m in Sources */,
 				5B3F9E0C187214C1003E437C /* LinesMapViewController.m in Sources */,
 				5BCF245B18689BFC00E7CD6D /* OCMapView.m in Sources */,

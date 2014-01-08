@@ -7,11 +7,35 @@
 //
 
 #import "AppDelegate.h"
+#import "Reachability.h"
+
+@interface AppDelegate ()
+
+@property (nonatomic, strong) UIAlertView *internetAlert;
+
+@end
 
 @implementation AppDelegate
 
+@synthesize internetAlert;
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Allocate a reachability object
+    Reachability* reach = [Reachability reachabilityWithHostname:@"www.google.com"];
+    
+    // Tell the reachability that we DON'T want to be reachable on 3G/EDGE/CDMA
+    reach.reachableOnWWAN = NO;
+    
+    // Here we set up a NSNotification observer. The Reachability that caused the notification
+    // is passed in the object parameter
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(reachabilityDidChange:)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    
+    [reach startNotifier];
+    
     // Override point for customization after application launch.
     return YES;
 }
@@ -41,6 +65,31 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)reachabilityDidChange:(NSNotification *)notification
+{
+    Reachability *reachability = (Reachability *)[notification object];
+    if ([reachability isReachable]) {
+        NSLog(@"Reachable");
+        if (self.internetAlert) {
+            [self.internetAlert dismissWithClickedButtonIndex:0 animated:YES];
+            self.internetAlert = nil;
+        }
+    } else {
+        NSLog(@"Unreachable");
+        if (self.internetAlert) {
+            return;
+        }
+        
+        self.internetAlert = [[UIAlertView alloc] initWithTitle:@"No internet connection!"
+                                                        message:@"It looks like you are not connected to internet, this application needs internet connection to function properly."
+                                                       delegate:nil
+                                              cancelButtonTitle:@"OK"
+                                              otherButtonTitles:nil
+                              ];
+        [self.internetAlert show];
+    }
 }
 
 @end
