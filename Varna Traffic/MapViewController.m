@@ -75,7 +75,7 @@
     }
 }
 
--(MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
 {
     // if it's a cluster
     if ([annotation isKindOfClass:[OCAnnotation class]]) {
@@ -131,19 +131,11 @@
             return pinView;
         }
         
-        
         // If an existing pin view was not available, create one.
         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"DevicePinAnnotationView"];
         pinView.canShowCallout = YES;
         pinView.image = [UIImage imageNamed:@"bus"];
-        
-        // Add a detail disclosure button to the callout.
-        //        UIButton* rightButton = [UIButton buttonWithType:
-        //                                 UIButtonTypeDetailDisclosure];
-        //
-        //        [rightButton addTarget:self action:@selector(showDetailsView:) forControlEvents:UIControlEventTouchUpInside];
-        //        pinView.rightCalloutAccessoryView = rightButton;
-        
+
         return pinView;
     }
     

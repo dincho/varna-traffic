@@ -9,5 +9,5 @@
 #import "VTAnnotation.h"
 
 @implementation VTAnnotation
-
+@synthesize coordinate, title, subtitle;
 @end
