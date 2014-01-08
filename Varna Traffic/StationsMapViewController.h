@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "MapViewController.h"
+#import "StationViewController.h"
 #import "OCMapView.h"
 
-@interface StationsMapViewController : MapViewController
+@interface StationsMapViewController : MapViewController <StationViewControllerDelegate>
 
 @property (weak, nonatomic) IBOutlet OCMapView *mapView;
 

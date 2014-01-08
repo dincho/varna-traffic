@@ -66,6 +66,14 @@
     self.selectedAnnotation = view.annotation;
 }
 
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation
+{
+    MKAnnotationView *annotationView = [super mapView:mapView viewForAnnotation:annotation];
+    annotationView.rightCalloutAccessoryView = nil;
+    
+    return annotationView;
+}
+
 #pragma mark - Table view data source
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath

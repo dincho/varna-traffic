@@ -8,7 +8,6 @@
 
 #import "StationsMapViewController.h"
 #import "VarnaTrafficDataSource.h"
-#import "StationViewController.h"
 #import "OCAnnotation.h"
 #import "Station.h"
 #import "Device.h"
@@ -73,6 +72,7 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
         MKAnnotationView *annoView = (MKAnnotationView *)sender;
         svc.station = annoView.annotation;
         svc.dataSource = self.dataSource;
+        svc.delegate = self;
     }
 }
 
@@ -198,6 +198,14 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
     self.selectedAnnotation = station;
     self.selectedStation = station;
     [self.mapView setRegion:mapRegion animated:YES];
+}
+
+#pragma mark - StationViewControllerDelegate Protocol Conforming
+
+- (void)stationViewController:(StationViewController *)viewController didSelectDevice:(Device *)device
+{
+    self.selectedAnnotation = device;
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 @end
