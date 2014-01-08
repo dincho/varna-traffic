@@ -48,7 +48,7 @@
     NSString *subtitle = [NSString stringWithFormat:@"%@ (%@)", self.arriveTime, self.delay];
     
     if (self.arriveIn) {
-        subtitle = [NSString stringWithFormat:@"%@, after: %@", subtitle, self.arriveIn];
+        subtitle = [NSString stringWithFormat:@"%@, след: %@", subtitle, self.arriveIn];
     }
     
     return subtitle;

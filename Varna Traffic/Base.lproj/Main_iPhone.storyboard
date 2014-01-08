@@ -70,7 +70,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EYr-1o-7kx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchBar contentMode="redraw" id="FHv-9v-hTM">
+                <searchBar contentMode="redraw" placeholder="Линии" id="FHv-9v-hTM">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
@@ -141,7 +141,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7HZ-hT-RAR" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <searchBar contentMode="redraw" id="dul-Wm-wk9">
+                <searchBar contentMode="redraw" placeholder="Спирки" id="dul-Wm-wk9">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <textInputTraits key="textInputTraits"/>
@@ -206,11 +206,11 @@
             </objects>
             <point key="canvasLocation" x="1129" y="-1121"/>
         </scene>
-        <!--Navigation Controller - Stations-->
+        <!--Navigation Controller - Спирки-->
         <scene sceneID="EkO-2H-2zq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BJ5-ms-gOZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Stations" image="station_tab" id="nfv-Ld-w3V"/>
+                    <tabBarItem key="tabBarItem" title="Спирки" image="station_tab" id="nfv-Ld-w3V"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FTI-aS-Qz0">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -225,11 +225,11 @@
             </objects>
             <point key="canvasLocation" x="45" y="-1121"/>
         </scene>
-        <!--Navigation Controller - Lines-->
+        <!--Navigation Controller - Линии-->
         <scene sceneID="ZfE-8y-UHm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TVk-lU-Za9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Lines" image="bus_tab" id="7Ad-mz-Xfb"/>
+                    <tabBarItem key="tabBarItem" title="Линии" image="bus_tab" id="7Ad-mz-Xfb"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FC0-fk-a5r">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -244,11 +244,11 @@
             </objects>
             <point key="canvasLocation" x="52" y="-309"/>
         </scene>
-        <!--Navigation Controller - Info-->
+        <!--Navigation Controller - Информация-->
         <scene sceneID="bGg-yj-LWd">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kX7-dJ-xlF" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Info" image="info_tab" id="0z5-r6-ZlK"/>
+                    <tabBarItem key="tabBarItem" title="Информация" image="info_tab" id="0z5-r6-ZlK"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4nu-Pe-q8U">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -88,8 +88,8 @@
         }
         
         // set title
-        clusterAnnotation.title = @"Zoom in";
-        clusterAnnotation.subtitle = [NSString stringWithFormat:@"Bus stops: %ld", [clusterAnnotation.annotationsInCluster count]];
+        clusterAnnotation.title = [NSString stringWithFormat:@"%ld спирки", [clusterAnnotation.annotationsInCluster count]];
+        clusterAnnotation.subtitle = @"приближете за избор";
         
         return annotationView;
     }

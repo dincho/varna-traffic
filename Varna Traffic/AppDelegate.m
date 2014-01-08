@@ -82,8 +82,8 @@
             return;
         }
         
-        self.internetAlert = [[UIAlertView alloc] initWithTitle:@"No internet connection!"
-                                                        message:@"It looks like you are not connected to internet, this application needs internet connection to function properly."
+        self.internetAlert = [[UIAlertView alloc] initWithTitle:@"Липса на интернет връзка!"
+                                                        message:@"Това приложение се нуждае от интернет връзка за да функционира"
                                                        delegate:nil
                                               cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil
