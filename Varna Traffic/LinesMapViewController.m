@@ -105,7 +105,12 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    self.selectedLine = [self.filteredArray objectAtIndex:indexPath.row];
+    NSString *newLine = [self.filteredArray objectAtIndex:indexPath.row];
+    if (![self.selectedLine isEqualToString:newLine]) {
+        self.selectedLine = newLine;
+        self.shouldUpdateStations = YES;
+    }
+
     [self.searchDisplayController setActive:NO animated:YES];
 }
 
