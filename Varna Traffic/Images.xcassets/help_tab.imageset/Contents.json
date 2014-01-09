@@ -3,12 +3,12 @@
     {
       "idiom" : "universal",
       "scale" : "1x",
-      "filename" : "info_tab.png"
+      "filename" : "help_tab.png"
     },
     {
       "idiom" : "universal",
       "scale" : "2x",
-      "filename" : "info_tab-1.png"
+      "filename" : "help_tab-1.png"
     }
   ],
   "info" : {
