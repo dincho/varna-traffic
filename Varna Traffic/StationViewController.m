@@ -92,8 +92,8 @@
     
     // Configure the cell...
     Device *device = [self.devices objectAtIndex:indexPath.row];
-    cell.textLabel.text = [NSString stringWithFormat:@"Line #%@", device.line];
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"arrive time: %@ (%@); arrive in: %@ (%@)",
+    cell.textLabel.text = [NSString stringWithFormat:@"Линия #%@", device.line];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"разписание: %@(%@); след %@мин. (%@)",
                                  device.arriveTime, device.delay, device.arriveIn, device.distanceLeft];
     
     return cell;
