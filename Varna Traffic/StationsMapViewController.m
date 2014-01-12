@@ -134,13 +134,13 @@ static CGFloat kDEFAULTCLUSTERSIZE = 0.07;
     //remove device annotations
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"self isKindOfClass: %@", [Device class]];
     NSArray *annotationsToRemove = [self.mapView.annotations filteredArrayUsingPredicate:predicate];
-    [self.mapView removeAnnotations:annotationsToRemove];
+    [self.mapView removeAnnotationsWithoutClustering:annotationsToRemove];
     
     //don't cluster devices
     self.mapView.annotationsToIgnore = [NSMutableSet setWithArray:annotations];
     
     //add new annotations
-    [self.mapView addAnnotations:annotations];
+    [self.mapView addAnnotationsWithoutClustering:annotations];
     
     if ([self.selectedAnnotation isKindOfClass:[Device class]]) {
         Device *selectedDevice = (Device *) self.selectedAnnotation;
