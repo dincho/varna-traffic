@@ -14,6 +14,7 @@
 @interface MapViewController ()
 
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (assign, nonatomic) BOOL userLocationShown;
 
 @end
 
@@ -37,6 +38,8 @@
     mapRegion.span.latitudeDelta = 0.05;
     mapRegion.span.longitudeDelta = 0.05;
     
+    self.userLocationShown = NO;
+    
     [self.mapView setRegion:mapRegion animated:NO];
 }
 
@@ -48,6 +51,12 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
+    if (self.userLocationShown) {
+        return;
+    }
+    
+    self.userLocationShown = YES;
+    
     MKCoordinateRegion mapRegion;
     mapRegion.center = mapView.userLocation.coordinate;
     mapRegion.span.latitudeDelta = 0.05;

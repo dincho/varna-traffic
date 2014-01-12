@@ -292,6 +292,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Dincho Todorov";
 				TargetAttributes = {
+					5BB77E05184A796300BAA5AB = {
+						DevelopmentTeam = LS7J8EPB3W;
+					};
 					5BB77E2C184A796300BAA5AB = {
 						TestTargetID = 5BB77E05184A796300BAA5AB;
 					};
@@ -494,10 +497,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Varna Traffic/Varna Traffic-Prefix.pch";
 				INFOPLIST_FILE = "Varna Traffic/Varna Traffic-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -507,10 +513,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Varna Traffic/Varna Traffic-Prefix.pch";
 				INFOPLIST_FILE = "Varna Traffic/Varna Traffic-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
