@@ -81,5 +81,7 @@ default: 0.2*/
  algorithm and adds the clustered annotations to the map.
  */
 - (void)doClustering;
+- (void)addAnnotationsWithoutClustering:(NSArray *)annotations;
+- (void)removeAnnotationsWithoutClustering:(NSArray *)annotations;
 
 @end

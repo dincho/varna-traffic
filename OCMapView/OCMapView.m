@@ -88,6 +88,12 @@
     [self doClustering];
 }
 
+- (void)addAnnotationsWithoutClustering:(NSArray *)annotations
+{
+    [_allAnnotations addObjectsFromArray:annotations];
+}
+
+
 - (void)removeAnnotation:(id < MKAnnotation >)annotation{
     [_allAnnotations removeObject:annotation];
     self.neeedsClustering = YES;
@@ -100,6 +106,13 @@
     }
     self.neeedsClustering = YES;
     [self doClustering];
+}
+
+- (void)removeAnnotationsWithoutClustering:(NSArray *)annotations
+{
+    for (id<MKAnnotation> annotation in annotations) {
+        [_allAnnotations removeObject:annotation];
+    }
 }
 
 #pragma mark - Properties
